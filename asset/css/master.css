@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+
+@theme {
+  --font-shabnam: shabnam;
+  --font-shabnamLight: shabnamLight;
+  --color-blue: #008FFF;
+  --color-yellow: #FFBB00;
+  --color-bluesubmenu: #0000FF;
+  --color-hoverColor: #0064b2;
+  --animate-support: support 3s linear;
+  --shadow-card: 0px 0px 26px -8px rgba(0, 0, 0, 1);
+}
+
+@keyframes support {
+  0% {
+    margin-left: -56px;
+  }
+
+  35% {
+    margin-left: 0;
+  }
+
+  65% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -56px;
+  }
+}
+
+@font-face {
+  font-family: "shabnam";
+  src: url('./../font/Shabnam-Medium.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "shabnamLight";
+  src: url('./../font/Shabnam-Thin.ttf');
+}
+
+@layer base {
+  body {
+    @apply font-shabnam mx-auto min-h-screen bg-fixed bg-linear-[45deg, #EDE3BB_0%, #FFFFFF_35%];
+  }
+}
+
+@layer components {
+  .button {
+    @apply h-[35px] flex items-center justify-center gap-5 border border-white/50 text-sm rounded-4xl;
+  }
+
+  /* button */
+  .card {
+    @apply relative w-[48%] xl:w-[18%] h-[140px] rounded-[20px] bg-white shadow-[0_0_10px_-8px_rgba(0, 0, 0, 1)] p-[3%] flex flex-wrap content-center gap-y-[20%] m-[1%] lg:m-[10px];
+  }
+
+  .figCard {
+    @apply w-full flex xl:flex-wrap gap-[10px] xl:gap-[60px] xl:justify-center;
+  }
+
+  .imgCard {
+    @apply w-[64px] relative *:block *:w-[48px] *:object-cover *:duration-500 *:absolute *:top-0 *:left-0;
+  }
+
+  .titleCard {
+    @apply flex flex-wrap w-[90%] xl:justify-center *:w-full *:text-xs *:font-light *:text-gray-500 *:pt-1.5 *:xl:text-center *:font-shabnamLight;
+  }
+
+  .but {
+    @apply w-full flex justify-center items-center rounded-[5px] text-[13px] px-[5px] py-[5px] text-[#008fff] bg-[#008fff25];
+  }
+
+  /* card */
+  .range {
+    @apply w-full h-2 appearance-none bg-gray-200 rounded-full cursor-pointer;
+  }
+
+  .range::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-blue rounded-full cursor-pointer;
+  }
+
+  /* input range */
+  .arrow {
+    @apply after:content-[url('./../img/arrow.png')] after:absolute after:top-50 after:left-25 after:w-full after:hidden after:lg:flex;
+  }
+
+  .arrowFlip {
+    @apply after:content-[url('./../img/arrow.png')] after:absolute after:top-50 after:-left-25 after:w-full after:-scale-x-100 after:hidden after:lg:flex;
+  }
+  /* arrow */
+}
+
+
+@layer utilities {
+
+  .bt {
+    @apply border border-red-700;
+  }
+
+  .row {
+    @apply flex w-full flex-wrap;
+  }
+
+  /* .active {
+    @apply flex flex-wrap w-full;
+  } */
+
+}
