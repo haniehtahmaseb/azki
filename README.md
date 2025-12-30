@@ -1,6 +1,6 @@
 # azki
 
-- [Demo Project](https://haniehtahmaseb.github.io/music-player/)
+- [Demo Project](https://haniehtahmaseb.github.io/azki/)
 
 
 
